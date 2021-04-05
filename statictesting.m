@@ -4,14 +4,15 @@ clear all ;close all;clc
 % May 2019
 %% Load the area data
 cd 'C:\Users\Ernest\Desktop\THESIS\Tensile test'
-[~,~,area] = xlsread('area_input_eff.xlsx'); % read area file
+[~,~,area] = xlsread('area_input_eff.xlsx'); % read area file - excel file containing specimen name and its area
 %to convert numeric to string
 for ii=1:size(area,1)
    if isnumeric(area{ii,1})
                 area{ii,1} = num2str(area{ii,1});
    end
 end
-%% Main Program
+
+%% MAIN PROGRAM
 
 file = 'DA_A2';                                          % >>>>>CHANGE THIS
 path = 'C:\Users\Ernest\Desktop\THESIS\Tensile test\DA_A2\DAT'; % >>>>>THIS TOO
